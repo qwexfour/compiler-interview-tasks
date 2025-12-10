@@ -27,6 +27,11 @@ struct instr {
   user_range users();
 };
 
+// Problem description:
+// We want to check if an instruction produces a pointer value that is later
+// used in a load instruction, and find the closest load if it is the case.
+//
+// Task:
 // Design a function that takes an instruction that is guaranteed to not be
 // a load, and finds the shortest def-use chain where the value of
 // the instruction propagates through mov instructions and reaches a load
